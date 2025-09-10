@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>CYBER | Fees Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="cyber/assets/plugins/-fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="cyber/assets/plugins/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="cyber/assets/plugins/jquery-ui-dist/jquery-ui.min.css" rel="stylesheet" />
+    <link href="cyber/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cyber/assets/css/app.min.css">
+
+    <style>
+        /* Button styling for consistency */
+        .submit-btn {
+            background: #4c63d2;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+        }
+
+        .submit-btn:hover {
+            background: #3b4da7;
+            color: white;
+        }
+
+        /* Custom Breadcrumb Style */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb-item {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .breadcrumb-item a {
+            color: #50cee4;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: rgba(255, 255, 255, 0.7);
+            content: "/";
+            padding: 0 0.35rem;
+        }
+
+        /* Styling for the main content card */
+        .content-card {
+            max-width: 1000px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="appLoader" class="app-loader">
+        <div class="d-flex align-items-center gap-3">
+            <div class="app-loader-circle"></div>
+            <div class="app-loader-text">LOADING...</div>
+        </div>
+    </div>
+    <div id="appCover" class="app-cover"></div>
+
+    <div id="app" class="app app-with-header">
+
+        <div id="appHeader" class="app-header">
+            <div class="brand">
+                <div class="desktop-toggler">
+                    <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed"
+                        data-toggle-target=".app">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <div class="mobile-toggler">
+                    <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled"
+                        data-toggle-target=".app">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <a href="index.html" class="brand-logo">
+                    <span>CYBER <span class="opacity-5">ADMIN</span></span>
+                </a>
+            </div>
+            <div class="menu">
+                <div class="menu-item menu-item flex-1">
+                    <div class="hud-line-lg h-100"></div>
+                </div>
+                <div class="menu-item menu-item-search d-none d-md-flex">
+                    <span class="search-icon"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search" />
+                </div>
+                <div class="menu-item dropdown">
+                    <div class="menu-item-icon">
+                        <a href="#" data-bs-toggle="dropdown" class="menu-link">
+                            <div class="menu-icon"><i class="nav-icon bi-person-fill"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="appSidebar" class="app-sidebar">
+            <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+                <div class="menu">
+                    <div class="menu-profile">
+                        <a href="javascript:;" class="menu-profile-link" data-bs-toggle="dropdown">
+                            <div class="menu-profile-image text-body text-opacity-50">
+                                <i class="fa fa-user-circle fa-2x"></i>
+                            </div>
+                            <div class="menu-profile-info">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-1 fw-bold">
+                                        WELCOME, SUPER ADMIN
+                                    </div>
+                                    <div class="d-flex opacity-5"><b class="caret"></b></div>
+                                </div>
+                                <small>Head Office</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu-header">
+                        <div class="menu-title">NAVIGATION</div>
+                        <div class="flex-1 pt-3px ps-1">
+                            <div class="h-1px bg-white bg-opacity-25"></div>
+                            <div class="py-3px d-flex">
+                                <div class="hud-line flex-1 h-4px opacity-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="index.html" class="menu-link">
+                            <span class="menu-icon"><i class="bi-ui-radios-grid"></i></span>
+                            <span class="menu-text">DASHBOARD</span>
+                        </a>
+                    </div>
+
+                    <div class="menu-header">
+                        <div class="menu-title">ACADEMICS</div>
+                        <div class="flex-1 pt-3px ps-1">
+                            <div class="h-1px bg-white bg-opacity-25"></div>
+                            <div class="py-3px d-flex">
+                                <div class="hud-line flex-1 h-4px opacity-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item has-sub">
+                        <a href="#" class="menu-link">
+                            <span class="menu-icon"><i class="bi bi-clipboard-check"></i></span>
+                            <span class="menu-text">Exam Routine</span>
+                            <span class="menu-caret"><b class="caret"></b></span>
+                        </a>
+                        <div class="menu-submenu">
+                            <div class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">Add Exam Routine</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <span class="menu-text">View Exam Routine</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button class="app-sidebar-mobile-backdrop" data-toggle-target=".app"
+            data-toggle-class="app-sidebar-mobile-toggled"></button>
+        <div id="appContent" class="app-content d-flex flex-column">
+            <div class="app-content-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="page-header mb-0">Fees Group</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Fees Group</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add New</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="flex-1" data-scrollbar="true" data-height="100%">
+                <div class="container-fluid p-4">
+                    <div class="card border-0 content-card">
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="row g-4 mb-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Enter Name" required>
+                                        <div class="invalid-feedback">Please enter a name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Status <span class="text-danger">*</span></label>
+                                        <select class="form-select" required>
+                                            <option value="Active" selected>Active</option>
+                                            <option value="Inactive">Inactive</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a status.</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" rows="4" placeholder="Enter Description"></textarea>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label">Online Admission Fees</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="onlineFees">
+                                        <label class="form-check-label" for="onlineFees">
+                                            Yes
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-end mt-4">
+                                    <button type="submit" class="btn submit-btn">
+                                        <i class="bi bi-check-circle me-1"></i>
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cyber/assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cyber/assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="https://seantheme.com/cyber/assets/js/app.js"></script>
+
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+</body>
+
+</html>
